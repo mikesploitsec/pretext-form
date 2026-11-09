@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; form-action 'none'; base-uri 'none'; connect-src 'none'">
+<title>pretext-form: a configurable transfer-form prop for elicitation research</title>
+<meta name="description" content="A configurable, offline banking-style transfer form for screenshot pretexts in authorized social engineering and counter-fraud research. Flag the field you want completed. Nothing you type leaves the page.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="notice" class="tool-only">
+  <b>pretext-form</b>: a screenshot prop for authorized research. It is not a bank and has no back end; nothing you type leaves this page.
+  <a href="https://github.com/mikesploitsec/pretext-form">Source and rules of use</a> ·
+  <a href="https://mikesploit.com/papers/honeypot-buyer">Case study</a> ·
+  Press <kbd>P</kbd> to show or hide the panel.
+</div>
+
+<div id="canvas">
+  <div class="wrap">
+    <div class="masthead"><span id="m-title"></span><span class="timer" id="m-timer"></span><div class="sub" id="m-sub"></div></div>
+    <div class="nav" id="m-nav"></div>
+    <div class="crumb" id="m-crumb"></div>
+    <div class="stage">
+      <div class="steptab"><span id="m-step"></span><div class="hint">Fields marked <span class="req">*</span> are required before this beneficiary can be saved.</div></div>
+      <div class="errbox" id="m-err"></div>
+      <table class="form"><tbody id="m-fields"></tbody></table>
+      <div class="btnrow"><button id="b-submit" type="button">Submit</button><button class="active" type="button">Clear Form</button><button class="active" type="button">Save as Draft</button></div>
+    </div>
+    <div class="foot" id="m-foot"></div>
+  </div>
+</div>
+
+<button id="toggle" class="tool-only" type="button" title="Show or hide the panel (P)">Panel</button>
+
+<aside id="panel" class="tool-only" aria-label="Control panel">
+  <header><b>Control panel</b><button type="button" id="p-close" title="Hide (P)">×</button></header>
+  <section>
+    <label>Preset <select id="p-preset"></select></label>
+    <div class="row"><button type="button" id="p-capture">Capture mode</button><button type="button" id="p-reset">Reset</button></div>
+    <p class="small">Capture mode hides this panel and the notice. Press <kbd>P</kbd> to bring them back.</p>
+  </section>
+  <section>
+    <h3>Fields</h3>
+    <p class="small"><b>Show</b> puts the field on the form. <b>Flag</b> marks it required and blank, in red: that is the field you want filled. <b>Lock</b> greys it out as already verified.</p>
+    <div id="p-fields"></div>
+    <button type="button" id="p-add">+ Add field</button>
+  </section>
+  <section>
+    <h3>Page text</h3>
+    <label>Masthead <input id="t-title"></label>
+    <label>Masthead line <input id="t-sub"></label>
+    <label>Timer <input id="t-timer"></label>
+    <label>Breadcrumb <input id="t-crumb"></label>
+    <label>Step line <input id="t-step"></label>
+    <label>Error headline <input id="t-errhead"></label>
+    <label>Footer <input id="t-foot"></label>
+    <label>Masthead colour <input id="t-colour" type="color"></label>
+  </section>
+  <section>
+    <h3>Save</h3>
+    <div class="row"><button type="button" id="p-export">Export JSON</button><label class="filebtn">Import JSON<input type="file" id="p-import" accept="application/json"></label></div>
+    <p class="small">Exports stay on your machine. Treat an export with real values in it as case evidence.</p>
+  </section>
+</aside>
+<script src="app.js"></script>
+</body>
+</html>

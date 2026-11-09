@@ -1,0 +1,60 @@
+/* The form canvas: a deliberately generic, dated online-banking look. No real institution's name, logo or colours. */
+body { background:#ECE9D8; font:12px Tahoma, Arial, sans-serif; margin:0; padding:0 0 40px; color:#000; }
+#canvas { padding:24px 0 8px; }
+a { color:#0000CC; }
+.wrap { width:740px; margin:0 auto; }
+.masthead { background:var(--mast, #1A3C82); color:#fff; padding:10px 14px 8px; font:bold 18px Tahoma, Arial, sans-serif; letter-spacing:.4px; }
+.masthead .sub { font:normal 11px Tahoma, Arial, sans-serif; color:#C9D4EE; margin-top:2px; }
+.timer { float:right; color:rgba(255,255,255,.55); font:normal 11px Tahoma, Arial, sans-serif; padding-top:4px; }
+.nav { background:#F0F0EE; border-bottom:1px solid #999; padding:4px 14px; }
+.nav span { margin-right:14px; color:#0000CC; text-decoration:underline; }
+.crumb { padding:6px 14px 4px; color:#555; font-size:11px; background:#fff; border-left:1px solid #888; border-right:1px solid #888; }
+.stage { background:#fff; border:1px solid #888; border-top:none; padding:16px 14px 10px; }
+.steptab { background:#F5F5F3; border:1px solid #C8C8C4; padding:7px 10px; margin-bottom:12px; }
+.errbox { border:1px solid #C40000; background:#FFF2F2; padding:8px 10px; margin-bottom:14px; color:#900; }
+.errbox b { color:#C40000; }
+.errbox:empty { display:none; }
+table.form { border-collapse:collapse; width:100%; }
+table.form td { padding:6px 8px; vertical-align:middle; border-bottom:1px solid #E4E4E0; }
+table.form td.lbl { width:190px; text-align:right; font-weight:bold; white-space:nowrap; }
+.req { color:#C40000; font-weight:bold; }
+.val { display:inline-block; box-sizing:border-box; border:1px solid #7F9DB9; background:#FEFEFC; font:13px Tahoma, Arial, sans-serif; padding:3px 5px; width:300px; min-height:23px; vertical-align:middle; }
+.val.locked { background:#F2F2EE; color:#222; }
+td.bad .val { border:2px solid #C40000; background:#FFEDED; }
+td.errline { color:#C40000; font-size:11px; padding:0 8px 6px 204px; }
+.hint { color:#777; font-size:11px; }
+.btnrow { padding:14px 8px 6px 198px; }
+.btnrow button { font:12px Tahoma, Arial, sans-serif; padding:4px 18px; margin-right:10px; background:#F0F0EE; border:1px solid #909090; color:#9A9A96; }
+.btnrow button.active { background:#FDFDFB; border-color:#707070; color:#000; }
+.foot { margin:8px auto 0; color:#666; font-size:10px; text-align:center; }
+
+/* Tool chrome: hidden in capture mode. */
+body.capture .tool-only { display:none !important; }
+#notice { background:#111; color:#eee; font:13px/1.4 system-ui, sans-serif; padding:8px 14px; text-align:center; }
+#notice a { color:#9cf; }
+kbd { border:1px solid #888; border-radius:3px; padding:0 4px; font-size:11px; background:#222; color:#fff; }
+#toggle { position:fixed; right:16px; bottom:16px; font:600 13px system-ui, sans-serif; padding:8px 14px; border-radius:20px; border:0; background:#111; color:#fff; cursor:pointer; }
+#panel { position:fixed; top:0; right:0; bottom:0; width:380px; overflow:auto; background:#fbfbfa; border-left:1px solid #bbb; font:13px/1.35 system-ui, sans-serif; box-shadow:-4px 0 16px rgba(0,0,0,.12); }
+body.nopanel #panel { display:none; }
+#canvas { margin-right:380px; }
+body.nopanel #canvas, body.capture #canvas { margin-right:0; }
+@media (max-width:1180px) { #canvas { margin-right:340px; } }
+#panel header { position:sticky; top:0; display:flex; justify-content:space-between; align-items:center; background:#111; color:#fff; padding:10px 14px; }
+#panel header button { background:none; border:0; color:#fff; font-size:20px; cursor:pointer; }
+#panel section { padding:10px 14px; border-bottom:1px solid #e2e2e0; }
+#panel h3 { margin:0 0 6px; font-size:13px; }
+#panel label { display:block; margin:6px 0; }
+#panel label input:not([type=checkbox]):not([type=file]), #panel select { display:block; width:100%; box-sizing:border-box; padding:4px 6px; margin-top:2px; }
+#panel button { font:13px system-ui, sans-serif; padding:4px 10px; cursor:pointer; }
+#panel .row { display:flex; gap:8px; margin:6px 0; }
+.small { color:#666; font-size:12px; margin:6px 0; }
+.f { border:1px solid #ddd; background:#fff; border-radius:6px; padding:6px 8px; margin:6px 0; }
+.f.flagged { border-color:#C40000; box-shadow:inset 3px 0 0 #C40000; }
+.f input.lab, .f input.v { width:100%; box-sizing:border-box; padding:3px 5px; margin:2px 0; }
+.f input.lab { font-weight:600; }
+.f .opts { display:flex; gap:10px; align-items:center; font-size:12px; flex-wrap:wrap; }
+.f .opts label { display:inline; margin:0; }
+.f .opts .sp { flex:1; }
+.filebtn { display:inline-block !important; border:1px solid #888; padding:3px 10px; border-radius:2px; background:#efefef; cursor:pointer; margin:0 !important; }
+.filebtn input { display:none; }
+@media (max-width:1180px) { #panel { width:340px; } }
