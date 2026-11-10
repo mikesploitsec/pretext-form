@@ -4,6 +4,7 @@ title: "pretext-form: a configurable transfer-form prop for elicitation research
 type: software
 version: 1.0.0
 date-released: 2026-11-10
+doi: "10.5281/zenodo.24121085"
 license: MIT
 authors:
   - family-names: Wright

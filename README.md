@@ -6,6 +6,8 @@ A configurable, offline, banking-style transfer form for **screenshot pretexts**
 
 **Case study:** [Honeypot Buyer: an inside look at the coordinated inauthentic behaviour economy](https://mikesploit.com/papers/honeypot-buyer), DOI [10.5281/zenodo.24120753](https://doi.org/10.5281/zenodo.24120753). The section on the elicitation artifact explains why this exists.
 
+**Cite this tool:** DOI [10.5281/zenodo.24121085](https://doi.org/10.5281/zenodo.24121085) (all versions). See `CITATION.cff`.
+
 ## What it does
 
 When a subject has already given you payment details, the one detail a payer can't see is usually the one that matters: the name the account is registered to. Real payment flows ask for it. This page reproduces that moment. It shows a generic transfer form prefilled with what you already hold, and one or more fields **flagged** red as required and blank. You take a screenshot and send it. Whether to fill the blank is the subject's choice.
