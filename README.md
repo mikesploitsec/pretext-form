@@ -4,7 +4,7 @@ A configurable, offline, banking-style transfer form for **screenshot pretexts**
 
 **Live:** https://mikesploitsec.github.io/pretext-form/
 
-**Case study:** [Honeypot Buyer: an inside look at the coordinated inauthentic behaviour economy](https://mikesploit.com/papers/honeypot-buyer). The section on the elicitation artifact explains why this exists.
+**Case study:** [Honeypot Buyer: an inside look at the coordinated inauthentic behaviour economy](https://mikesploit.com/papers/honeypot-buyer), DOI [10.5281/zenodo.24120753](https://doi.org/10.5281/zenodo.24120753). The section on the elicitation artifact explains why this exists.
 
 ## What it does
 

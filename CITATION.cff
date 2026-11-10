@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use pretext-form in research, please cite it, and the paper it comes from."
+title: "pretext-form: a configurable transfer-form prop for elicitation research"
+type: software
+version: 1.0.0
+date-released: 2026-11-10
+license: MIT
+authors:
+  - family-names: Wright
+    given-names: Mike
+    orcid: "https://orcid.org/0009-0008-6998-9917"
+repository-code: "https://github.com/mikesploitsec/pretext-form"
+url: "https://mikesploitsec.github.io/pretext-form/"
+abstract: >-
+  A configurable, offline banking-style transfer form for screenshot pretexts in
+  authorized social engineering and counter-fraud research. No back end; the
+  content security policy blocks connections and submission.
+keywords:
+  - social engineering
+  - elicitation
+  - counter-fraud
+  - OSINT
+  - honeypot
+references:
+  - type: article
+    title: "Honeypot Buyer: An Inside Look at the Coordinated Inauthentic Behaviour Economy"
+    authors:
+      - family-names: Wright
+        given-names: Mike
+        orcid: "https://orcid.org/0009-0008-6998-9917"
+    year: 2026
+    doi: "10.5281/zenodo.24120753"
+    url: "https://mikesploit.com/papers/honeypot-buyer"
